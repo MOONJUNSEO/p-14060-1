@@ -14,12 +14,12 @@ public class Main {
         int id = 1;
         while (true) {
             System.out.print("명령) ");
-            String cmd = scanner.nextLine().trim(); // 공백 제거
+            String cmd = scanner.nextLine().trim();
 
-            // 1. "종료" 명령을 가장 먼저 확인
+            // 1. "종료" 명령
             if (cmd.equals("종료")) {
-                scanner.close(); // 프로그램을 종료하기 직전에 스캐너를 닫습니다.
-                break; // while 루프 탈출
+                scanner.close();
+                break;
             }
 
             // 2. "등록" 명령
@@ -36,12 +36,11 @@ public class Main {
 
             // 3. "목록" 명령
             else if (cmd.equals("목록")) {
-                System.out.println("번호 / 작가 / 명언"); // '명언' 오타 수정
+                System.out.println("번호 / 작가 / 명언");
                 System.out.println("----------------------");
                 // 목록은 역순으로 출력
                 for (int i = wiseSayings.size() - 1; i >= 0; i--) {
                     WiseSaying ws = wiseSayings.get(i);
-                    // System.out.printf 마지막에 \n (줄바꿈) 추가
                     System.out.printf("%d / %s / %s\n", ws.getId(), ws.getAuthor(), ws.getContent());
                 }
             }
