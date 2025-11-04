@@ -8,7 +8,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("== 명령 앱 ==");
+        System.out.println("== 명언 앱 ==");
         Scanner scanner = new Scanner(System.in);
         List<WiseSaying> wiseSayings = new ArrayList<>();
         int id = 1;
